@@ -1,5 +1,8 @@
 ;; basic editing helper
 
+;; global linum mode
+(global-linum-mode 1)
+
 ;; config the packages
 (require 'magit)
 (define-key global-map (kbd "C-c m") 'magit-status)
