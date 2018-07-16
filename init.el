@@ -13,3 +13,6 @@
 
 ;; basic editing helper
 (load "~/.emacs.d/lisp/bn-basic-editing-helper.el")
+
+;; web-mode
+(load "~/.emacs.d/lisp/bn-web-mode.el")
