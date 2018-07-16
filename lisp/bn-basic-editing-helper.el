@@ -58,4 +58,32 @@
 ;;
 ;; when foucus out from emacs, auto save
 (add-hook 'focus-out-hook 'bn-full-auto-save)
-		 
+
+;;
+;; helm
+(require 'helm)
+(require 'helm-config)
+;; setq 
+(setq helm-autoresize-max-height 0)
+(setq helm-autoresize-min-height 20)
+(setq helm-M-x-fuzzy-match t)
+(setq helm-buffers-fuzzy-matching t
+      helm-recentf-fuzzy-match    t)
+(setq helm-semantic-fuzzy-match t
+      helm-imenu-fuzzy-match    t)
+;; set key
+(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
+(global-set-key (kbd "M-y") 'helm-show-kill-ring)
+(global-set-key (kbd "C-x b") 'helm-mini)
+(global-set-key (kbd "C-c h f") 'helm-find)
+(global-set-key (kbd "C-c h o") 'helm-occur)
+(global-set-key (kbd "C-c h m") 'helm-mark-ring)
+
+(helm-autoresize-mode 1)
+(helm-mode 1)
+
+
+;;
+;; default global key mapping
+(global-set-key (kbd "C-x v") 'set-mark-command)
