@@ -1,5 +1,7 @@
 *
 !/**/
-！*.el
+!*.el
 !.gitignore
 !README.md
+elpa/
+custom.el
