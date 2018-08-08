@@ -19,3 +19,11 @@
 (global-set-key (kbd "C-c C-l") 'windmove-right)
 (global-set-key (kbd "C-c C-j") 'windmove-up)
 (global-set-key (kbd "C-c C-k") 'windmove-down)
+
+;; line space
+(setq-default line-spacing 0.5)
+
+;; fold-this
+(global-set-key (kbd "C-c C-f") 'fold-this-all)
+(global-set-key (kbd "C-c C-F") 'fold-this)
+(global-set-key (kbd "C-c M-f") 'fold-this-unfold-all)

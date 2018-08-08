@@ -20,9 +20,13 @@
     yasnippet
     markdown-mode
     dracula-theme
+    use-package
     company
     helm
     web-mode
+    scala-mode
+    fold-this
+    auto-dim-other-buffers
     ) "a list of packages to ensure are installed at launch.")
 
 ;; method to check if all packages are installed

@@ -3,6 +3,12 @@
 ;; global linum mode
 (global-linum-mode 1)
 
+;; auto revert
+(global-auto-revert-mode 1)
+
+;; electirc pair mode
+(electric-pair-mode 1)
+
 ;; config the packages
 (require 'magit)
 (define-key global-map (kbd "C-c m") 'magit-status)
@@ -26,7 +32,7 @@
 ;; company
 (require 'company)
 (add-hook 'after-init-hook 'global-company-mode)
-(global-set-key "\t" 'company-complete-common)
+(global-set-key (kbd "s-/") 'company-complete-common)
 (eval-after-load 'company
   '(progn
      (define-key company-active-map (kbd "C-p") 'company-select-previous)
@@ -41,6 +47,9 @@
    `(company-scrollbar-fg ((t (:background ,(color-lighten-name bg 5)))))
    `(company-tooltip-selection ((t (:inherit font-lock-function-name-face))))
    `(company-tooltip-common ((t (:inherit font-lock-constant-face))))))
+
+;;; only tab/enter to auto complete
+(setq company-auto-complete 'company-explicit-action-p)
 
 ;;
 ;; place all backup files in one directory
@@ -66,3 +75,8 @@
 ;;
 ;; default global key mapping
 (global-set-key (kbd "C-x v") 'set-mark-command)
+
+;; auto dim other buffer
+(add-hook 'after-init-hook (lambda ()
+  (when (fboundp 'auto-dim-other-buffers-mode)
+    (auto-dim-other-buffers-mode t))))

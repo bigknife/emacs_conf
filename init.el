@@ -19,3 +19,6 @@
 
 ;; web-mode
 (load "~/.emacs.d/lisp/bn-web-mode.el")
+
+;; scala-mode
+(load "~/.emacs.d/lisp/bn-scala-mode.el")
