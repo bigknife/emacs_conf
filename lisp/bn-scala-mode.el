@@ -15,3 +15,10 @@
     )
 
   (message "scalafmt done"))
+;;; define key to invoke scalafmt
+(global-set-key (kbd "C-x C-<return>") 'bigknife-scala/scalafmt-file)
+
+;;; add hs minor mode and set kbd
+(add-hook 'scala-mode-hook 'hs-minor-mode)
+(global-set-key (kbd "C--") 'hs-toggle-hiding)
+(add-to-list 'auto-mode-alist '("\\.conf\\'" . javascript-mode))

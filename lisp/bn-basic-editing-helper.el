@@ -52,10 +52,15 @@
 (setq company-auto-complete 'company-explicit-action-p)
 
 ;;
-;; place all backup files in one directory
+;; Save all tempfiles in $TMPDIR/emacs$UID/
+(setq create-lockfiles nil)
+(defconst emacs-tmp-dir (expand-file-name (format "emacs%d" (user-uid)) temporary-file-directory))
 (setq backup-directory-alist
-      `(("." . ,(concat user-emacs-directory "backups"))))
-
+    `((".*" . ,emacs-tmp-dir)))
+(setq auto-save-file-name-transforms
+    `((".*" ,emacs-tmp-dir t)))
+(setq auto-save-list-file-prefix
+    emacs-tmp-dir)
 ;;
 ;; auto save all buffers
 (defun bn-full-auto-save ()

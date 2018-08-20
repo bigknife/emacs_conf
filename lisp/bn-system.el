@@ -20,12 +20,13 @@
     yasnippet
     markdown-mode
     dracula-theme
+    solarized-theme
+    ample-theme
     use-package
     company
     helm
     web-mode
     scala-mode
-    fold-this
     auto-dim-other-buffers
     ) "a list of packages to ensure are installed at launch.")
 

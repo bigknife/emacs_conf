@@ -27,9 +27,12 @@
 (global-set-key (kbd "C-c h f") 'helm-find)
 (global-set-key (kbd "C-c h o") 'helm-occur)
 (global-set-key (kbd "C-c h m") 'helm-mark-ring)
+(global-unset-key (kbd "C-x m"))
+(global-set-key (kbd "C-x m") 'helm-imenu)
 (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) ; rebind tab to run persistent action
 (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action) ; make TAB work in terminal
 (define-key helm-map (kbd "C-z")  'helm-select-action) ; list actions using C-z
+
 
 (helm-autoresize-mode 1)
 (helm-mode 1)
