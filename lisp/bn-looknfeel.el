@@ -40,3 +40,9 @@
 
 ;;; maxmize on open
 (add-hook 'window-setup-hook 'toggle-frame-maximized)
+
+;;; projectile
+(projectile-global-mode)
+(setq projectile-completion-system 'helm)
+(helm-projectile-on)
+(global-set-key (kbd "C-c C-f") 'helm-projectile-find-file)

@@ -28,6 +28,8 @@
     web-mode
     scala-mode
     auto-dim-other-buffers
+    projectile
+    helm-projectile
     ) "a list of packages to ensure are installed at launch.")
 
 ;; method to check if all packages are installed
