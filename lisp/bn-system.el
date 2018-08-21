@@ -30,6 +30,7 @@
     auto-dim-other-buffers
     projectile
     helm-projectile
+    reveal-in-osx-finder
     ) "a list of packages to ensure are installed at launch.")
 
 ;; method to check if all packages are installed

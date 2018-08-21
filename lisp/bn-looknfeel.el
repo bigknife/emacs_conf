@@ -46,3 +46,6 @@
 (setq projectile-completion-system 'helm)
 (helm-projectile-on)
 (global-set-key (kbd "C-c C-f") 'helm-projectile-find-file)
+
+;;; reveal in osx finder
+(global-set-key (kbd "C-c o") 'reveal-in-osx-finder)
