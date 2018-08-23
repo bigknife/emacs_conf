@@ -46,6 +46,21 @@
 (setq projectile-completion-system 'helm)
 (helm-projectile-on)
 (global-set-key (kbd "C-c C-f") 'helm-projectile-find-file)
+(global-set-key (kbd "C-c C-c C-f") 'helm-projectile-switch-project)
 
 ;;; reveal in osx finder
 (global-set-key (kbd "C-c o") 'reveal-in-osx-finder)
+
+;;; org mode
+(eval-after-load 'org
+  (progn
+    (define-key org-mode-map (kbd "C-c C-c") nil)
+    (define-key org-mode-map (kbd "C-c C-f") nil)    
+    )
+  )
+(eval-after-load 'web
+  (progn
+    (define-key web-mode-map (kbd "C-c C-c") nil)
+    (define-key web-mode-map (kbd "C-c C-f") nil)    
+    )
+  )

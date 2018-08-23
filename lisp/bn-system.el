@@ -31,6 +31,7 @@
     projectile
     helm-projectile
     reveal-in-osx-finder
+    xah-find
     ) "a list of packages to ensure are installed at launch.")
 
 ;; method to check if all packages are installed
