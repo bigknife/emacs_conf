@@ -52,12 +52,14 @@
 (global-set-key (kbd "C-c o") 'reveal-in-osx-finder)
 
 ;;; org mode
+(require 'org)
 (eval-after-load 'org
   (progn
     (define-key org-mode-map (kbd "C-c C-c") nil)
     (define-key org-mode-map (kbd "C-c C-f") nil)    
     )
   )
+(require 'web-mode)
 (eval-after-load 'web
   (progn
     (define-key web-mode-map (kbd "C-c C-c") nil)
