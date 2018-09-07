@@ -15,6 +15,7 @@
 
 ;; disable splash screen
 (setf inhibit-splash-screen t)
+(global-hl-line-mode t)
 ;; use a empty buffer
 (switch-to-buffer (get-buffer-create "bn-startup"))
 (delete-other-windows)
