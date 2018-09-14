@@ -1,8 +1,8 @@
 ;; look and feel
 
 ;; use dracula theme
-;; (load-theme 'dracula t)
-(load-theme 'solarized-light t)
+(load-theme 'dracula t)
+;; (load-theme 'solarized-light t)
 ;; then in your init you can load all of the themes
 ;; without enabling theme (or just load one)
 ;; (load-theme 'ample t t)
@@ -67,3 +67,5 @@
     (define-key web-mode-map (kbd "C-c C-f") nil)    
     )
   )
+
+(setq-default mac-use-title-bar t)
