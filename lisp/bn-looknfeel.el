@@ -1,8 +1,8 @@
 ;; look and feel
 
 ;; use dracula theme
-;; (load-theme 'dracula t)
-(load-theme 'solarized-light t)
+(load-theme 'dracula t)
+;; (load-theme 'solarized-light t)
 ;; then in your init you can load all of the themes
 ;; without enabling theme (or just load one)
 ;; (load-theme 'ample t t)
@@ -32,7 +32,27 @@
 (global-set-key (kbd "C-c C-k") 'windmove-down)
 
 ;; line space
-(setq-default line-spacing 0.5)
+;; (setq-default line-spacing 0)
+(defvar line-padding 2)
+(defun add-line-padding ()
+  "Add extra padding between lines"
+
+; remove padding overlays if they already exist
+(let ((overlays (overlays-at (point-min))))
+  (while overlays
+    (let ((overlay (car overlays)))
+      (if (overlay-get overlay 'is-padding-overlay)
+          (delete-overlay overlay)))
+    (setq overlays (cdr overlays))))
+; add a new padding overlay
+(let ((padding-overlay (make-overlay (point-min) (point-max))))
+  (overlay-put padding-overlay 'is-padding-overlay t)
+  (overlay-put padding-overlay 'line-spacing (* .1 line-padding))
+  (overlay-put padding-overlay 'line-height (+ 1 (* .1 line-padding))))
+(setq mark-active nil))
+
+
+(add-hook 'buffer-list-update-hook 'add-line-padding)
 
 ;; fold-this
 ;; (global-set-key (kbd "C-c C-f") 'fold-this-all)
@@ -67,7 +87,6 @@
     (define-key web-mode-map (kbd "C-c C-f") nil)    
     )
   )
-
 ;; transparent
 (defun toggle-transparency ()
    (interactive)
@@ -86,4 +105,3 @@
    "Sets the transparency of the frame window. 0=transparent/100=opaque"
    (interactive "nTransparency Value 0 - 100 opaque:")
    (set-frame-parameter (selected-frame) 'alpha value))
-
