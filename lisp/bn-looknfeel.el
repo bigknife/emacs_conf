@@ -89,3 +89,8 @@
   )
 
 (setq-default mac-use-title-bar t)
+
+;; for emacs-mac port
+(setq mac-option-modifier 'meta)
+(setq mac-command-modifier 'super)
+(setq mac-pass-command-to-system nil)
