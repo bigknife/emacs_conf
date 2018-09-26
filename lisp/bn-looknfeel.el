@@ -31,6 +31,10 @@
 (global-set-key (kbd "C-c C-j") 'windmove-up)
 (global-set-key (kbd "C-c C-k") 'windmove-down)
 
+;; reset C-a to back to the indentation
+(global-unset-key (kbd "C-a"))
+(global-set-key (kbd "C-a") 'back-to-indentation)
+
 ;; line space
 ;; (setq-default line-spacing 0)
 (defvar line-padding 2)
