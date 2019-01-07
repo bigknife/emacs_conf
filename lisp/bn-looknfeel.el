@@ -37,7 +37,7 @@
 
 ;; line space
 ;; (setq-default line-spacing 0)
-(defvar line-padding 2)
+(defvar line-padding 1)
 (defun add-line-padding ()
   "Add extra padding between lines"
 

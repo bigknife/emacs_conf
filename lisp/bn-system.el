@@ -32,6 +32,8 @@
     helm-projectile
     reveal-in-osx-finder
     xah-find
+    rust-mode
+    racer
     ) "a list of packages to ensure are installed at launch.")
 
 ;; method to check if all packages are installed

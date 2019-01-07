@@ -22,3 +22,6 @@
 
 ;; scala-mode
 (load "~/.emacs.d/lisp/bn-scala-mode.el")
+
+;; rust-mode
+(load "~/.emacs.d/lisp/bn-rust-mode.el")
